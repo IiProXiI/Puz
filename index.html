@@ -7,7 +7,7 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background: linear-gradient(to right, #ff7e5f, #feb47b); /* تدرج ألوان للخلفية */
+            background: linear-gradient(to right, #cfe2f3, #6fa8dc); /* تدرج ألوان للخلفية */
             color: #333;
         }
 
@@ -77,17 +77,17 @@
 </head>
 <body>
     <div class="container">
-        <h1>تحدي الأرقام</h1>
+        <h1>Can You Fix Me Pls?</h1>
         <div class="challenge">
-            <p>ما هو الرقم الصحيح الذي يفتح البريد الإلكتروني؟</p>
-            <p>أدخل الرقم في الحقل أدناه:</p>
+            <p>You should put a number here, but I don't know what it is</p>
+            <p>:</p>
             <form id="challengeForm">
-                <input type="text" id="numberInput" placeholder="أدخل الرقم هنا" required>
-                <button type="submit">تحقق</button>
+                <input type="text" id="numberInput" placeholder="Try 5050" required>
+                <button type="submit">Check</button>
             </form>
         </div>
         <div class="solution">
-            <p>تهانينا! لقد حللت التحدي. البريد الإلكتروني هو:</p>
+            <p>دييم! كيف جبتها:</p>
             <p id="email"></p>
         </div>
     </div>
@@ -96,12 +96,12 @@
         document.getElementById('challengeForm').addEventListener('submit', function(event) {
             event.preventDefault();
             var numberInput = document.getElementById('numberInput').value.trim();
-            if (numberInput === '0632') {  // الرقم الصحيح هو 0632
+            if (numberInput === '006107') {  // الرقم الصحيح هو 0632
                 document.querySelector('.challenge').style.display = 'none';
                 document.querySelector('.solution').style.display = 'block';
                 document.getElementById('email').textContent = 'ibarqiseeyou@gmail.com';
             } else {
-                alert('الرقم غير صحيح. حاول مرة أخرى.');
+                alert('جرب شئ ثاني');
             }
         });
     </script>
