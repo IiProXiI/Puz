@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>تحدي تشفير</title>
+    <title>تحدي التحولات</title>
     <style>
         body { font-family: Arial, sans-serif; }
         .container { max-width: 600px; margin: 0 auto; text-align: center; padding: 20px; }
@@ -11,13 +11,13 @@
 </head>
 <body>
     <div class="container">
-        <h1>تحدي تشفير</h1>
+        <h1>تحدي التحولات</h1>
         <div class="challenge">
             <p>حل اللغز التالي:</p>
-            <p>نص مشفر: <strong>Jvduhuv dph lv: Mgr yhu | </strong></p>
-            <p>قم بفك تشفير النص باستخدام Caesar Cipher مع تحول +3 (أي كل حرف يتحول إلى الحرف الذي يليه بثلاث خطوات).</p>
+            <p>ما هو عدد التحولات (shifts) الصحيح حتى يظهر البريد الإلكتروني؟</p>
+            <p>مثلاً، حاول إدخال 1+، 2+، أو 3+.</p>
             <form id="challengeForm">
-                <input type="text" id="answer" placeholder="أدخل البريد الإلكتروني هنا" required>
+                <input type="text" id="shifts" placeholder="أدخل عدد التحولات هنا" required>
                 <button type="submit">تحقق</button>
             </form>
         </div>
@@ -30,13 +30,13 @@
     <script>
         document.getElementById('challengeForm').addEventListener('submit', function(event) {
             event.preventDefault();
-            var answer = document.getElementById('answer').value.trim();
-            if (answer === 'ibarqiseeyou@gmail.com') {  // البريد الإلكتروني الصحيح
+            var shifts = document.getElementById('shifts').value.trim();
+            if (shifts === '3+') {  // عدد التحولات الصحيح هو 3
                 document.querySelector('.challenge').style.display = 'none';
                 document.querySelector('.solution').style.display = 'block';
                 document.getElementById('email').textContent = 'ibarqiseeyou@gmail.com';
             } else {
-                alert('الإجابة غير صحيحة. حاول مرة أخرى.');
+                alert('العدد غير صحيح. حاول مرة أخرى.');
             }
         });
     </script>
