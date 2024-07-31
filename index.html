@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>تحدي التحولات</title>
+    <title>تحدي الأرقام</title>
     <style>
         body { font-family: Arial, sans-serif; }
         .container { max-width: 600px; margin: 0 auto; text-align: center; padding: 20px; }
@@ -11,13 +11,13 @@
 </head>
 <body>
     <div class="container">
-        <h1>تحدي التحولات</h1>
+        <h1>تحدي الأرقام</h1>
         <div class="challenge">
             <p>حل اللغز التالي:</p>
-            <p>ما هو عدد التحولات (shifts) الصحيح حتى يظهر البريد الإلكتروني؟</p>
-            <p>مثلاً، حاول إدخال 1+، 2+، أو 3+.</p>
+            <p>ما هو الرقم الصحيح الذي يفتح البريد الإلكتروني؟</p>
+            <p>أدخل الرقم في الحقل أدناه:</p>
             <form id="challengeForm">
-                <input type="text" id="shifts" placeholder="أدخل عدد التحولات هنا" required>
+                <input type="text" id="numberInput" placeholder="أدخل الرقم هنا" required>
                 <button type="submit">تحقق</button>
             </form>
         </div>
@@ -30,13 +30,13 @@
     <script>
         document.getElementById('challengeForm').addEventListener('submit', function(event) {
             event.preventDefault();
-            var shifts = document.getElementById('shifts').value.trim();
-            if (shifts === '3+') {  // عدد التحولات الصحيح هو 3
+            var numberInput = document.getElementById('numberInput').value.trim();
+            if (numberInput === '0632') {  // الرقم الصحيح هو 0632
                 document.querySelector('.challenge').style.display = 'none';
                 document.querySelector('.solution').style.display = 'block';
                 document.getElementById('email').textContent = 'ibarqiseeyou@gmail.com';
             } else {
-                alert('العدد غير صحيح. حاول مرة أخرى.');
+                alert('الرقم غير صحيح. حاول مرة أخرى.');
             }
         });
     </script>
