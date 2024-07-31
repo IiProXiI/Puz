@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>تحدي بسيط</title>
+    <title>تحدي تشفير</title>
     <style>
         body { font-family: Arial, sans-serif; }
         .container { max-width: 600px; margin: 0 auto; text-align: center; padding: 20px; }
@@ -11,12 +11,13 @@
 </head>
 <body>
     <div class="container">
-        <h1>تحدي بسيط</h1>
+        <h1>تحدي تشفير</h1>
         <div class="challenge">
             <p>حل اللغز التالي:</p>
-            <p>ما هو الرقم الذي يظهر عند جمع الأرقام 5 و 3؟</p>
+            <p>نص مشفر: <strong>Jvduhuv dph lv: Mgr yhu | </strong></p>
+            <p>قم بفك تشفير النص باستخدام Caesar Cipher مع تحول +3 (أي كل حرف يتحول إلى الحرف الذي يليه بثلاث خطوات).</p>
             <form id="challengeForm">
-                <input type="text" id="answer" placeholder="أدخل الإجابة هنا" required>
+                <input type="text" id="answer" placeholder="أدخل البريد الإلكتروني هنا" required>
                 <button type="submit">تحقق</button>
             </form>
         </div>
@@ -29,8 +30,8 @@
     <script>
         document.getElementById('challengeForm').addEventListener('submit', function(event) {
             event.preventDefault();
-            var answer = document.getElementById('answer').value;
-            if (parseInt(answer) === 8) {  // الإجابة الصحيحة هي 8
+            var answer = document.getElementById('answer').value.trim();
+            if (answer === 'ibarqiseeyou@gmail.com') {  // البريد الإلكتروني الصحيح
                 document.querySelector('.challenge').style.display = 'none';
                 document.querySelector('.solution').style.display = 'block';
                 document.getElementById('email').textContent = 'ibarqiseeyou@gmail.com';
