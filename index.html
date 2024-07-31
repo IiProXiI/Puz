@@ -3,17 +3,82 @@
 <head>
     <title>تحدي الأرقام</title>
     <style>
-        body { font-family: Arial, sans-serif; }
-        .container { max-width: 600px; margin: 0 auto; text-align: center; padding: 20px; }
-        .challenge { margin-bottom: 20px; }
-        .solution { display: none; }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #ff7e5f, #feb47b); /* تدرج ألوان للخلفية */
+            color: #333;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.9); /* خلفية بيضاء شبه شفافة */
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* تأثير الظل */
+        }
+
+        .challenge {
+            margin-bottom: 20px;
+        }
+
+        .solution {
+            display: none;
+        }
+
+        h1 {
+            font-size: 2em;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.2em;
+            line-height: 1.5;
+        }
+
+        form input, form button {
+            padding: 10px;
+            margin: 10px 0;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+        }
+
+        form input {
+            width: calc(100% - 24px); /* للتأكد من ملء العرض */
+            font-size: 1em;
+        }
+
+        form button {
+            background-color: #ff7e5f;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            font-size: 1em;
+        }
+
+        form button:hover {
+            background-color: #feb47b;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+
+            form input, form button {
+                width: 100%;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>تحدي الأرقام</h1>
         <div class="challenge">
-            <p>حل اللغز التالي:</p>
             <p>ما هو الرقم الصحيح الذي يفتح البريد الإلكتروني؟</p>
             <p>أدخل الرقم في الحقل أدناه:</p>
             <form id="challengeForm">
@@ -31,7 +96,7 @@
         document.getElementById('challengeForm').addEventListener('submit', function(event) {
             event.preventDefault();
             var numberInput = document.getElementById('numberInput').value.trim();
-            if (numberInput === '006107') {  // الرقم الصحيح هو 0632
+            if (numberInput === '0632') {  // الرقم الصحيح هو 0632
                 document.querySelector('.challenge').style.display = 'none';
                 document.querySelector('.solution').style.display = 'block';
                 document.getElementById('email').textContent = 'ibarqiseeyou@gmail.com';
