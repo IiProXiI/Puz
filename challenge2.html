@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تحدي الأرقام</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #ff7e5f, #feb47b); /* تدرج ألوان للخلفية */
+            color: #333;
+            text-align: center;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.9); /* خلفية بيضاء شبه شفافة */
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* تأثير الظل */
+        }
+        input, button {
+            padding: 10px;
+            margin: 10px 0;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #ff7e5f;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #feb47b;
+        }
+        #result {
+            font-size: 1.5em;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>تحدي الأرقام</h1>
+        <p>حل اللغز التالي:</p>
+        <p>ما هو الرقم الصحيح؟</p>
+        <input type="text" id="numberInput" placeholder="أدخل الرقم هنا" required>
+        <button onclick="checkNumber()">تحقق</button>
+        <p id="result"></p>
+    </div>
+
+    <script>
+        function checkNumber() {
+            var numberInput = document.getElementById('numberInput').value.trim();
+            var resultElement = document.getElementById('result');
+
+            if (numberInput === '0632') {  // الرقم الصحيح
+                resultElement.textContent = 'تهانينا! لقد حللت اللغز.';
+            } else {
+                resultElement.textContent = 'الرقم غير صحيح. حاول مرة أخرى.';
+            }
+        }
+    </script>
+</body>
+</html>
